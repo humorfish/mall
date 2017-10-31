@@ -1,6 +1,8 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
+import {SharedModule} from '../shared';
+
 import {HomeCmp} from './home.cmp';
 
 const ROUTES: Routes = [
@@ -9,7 +11,8 @@ const ROUTES: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forChild(ROUTES)
+        RouterModule.forChild(ROUTES),
+        SharedModule
     ],
     declarations: [
         HomeCmp,

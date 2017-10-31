@@ -3,6 +3,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {Routes, RouterModule} from '@angular/router';
 
+import {SharedModule} from '../shared';
+
 import {LoginComp} from './login/login.comp';
 import {RegisterComp} from './register/register.comp';
 
@@ -19,7 +21,8 @@ const ROUTES: Routes = [
 @NgModule({
     imports: [
         FormsModule,
-        RouterModule.forChild(ROUTES)
+        RouterModule.forChild(ROUTES),
+        SharedModule
     ],
     declarations: [
         LoginComp,
