@@ -1,0 +1,45 @@
+@import '../../assets/scss/base/app_base.scss';
+.c-login-wrapper {
+    background: url('../../assets/img/login/login_bg.png');
+    background: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    & > .c-login-container {
+        padding-top: 11%;
+        & > .c-login-box {
+            width: 410px;
+            padding: 20px;
+            -webkit-box-shadow: $c-box-shadow;
+            -moz-box-shadow: $c-box-shadow;
+            box-shadow: $c-box-shadow;
+            border: 0;
+            background: $c-color-white;
+            .c-login-header {
+                margin-bottom: 25px;
+                h3 {
+                    color: $c-color-black-primary;
+                }
+                img {
+                    width: 32px;
+                    height: 32px;
+                    vertical-align: -7px;
+                    margin-right: 2px;
+                    background-color: $c-color-deep;
+                    &:hover{
+                        -o-transition: all 0.5s ease-in-out;
+                        -ms-transition: all 0.5s ease-in-out;
+                        -moz-transition: all 0.5s ease-in-out;
+                        -webkit-transition: all 0.5s ease-in-out;
+                        transition: all 0.5s ease-in-out;
+                        -o-transform: rotateY(-360deg);
+                        -ms-transform: rotateY(-360deg);
+                        -moz-transform: rotateY(-360deg);
+                        -webkit-transform: rotateY(-360deg);
+                        transform: rotateY(-360deg);
+                    } 
+                }
+            }
+        }
+    }
+}

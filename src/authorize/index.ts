@@ -3,15 +3,15 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {Routes, RouterModule} from '@angular/router';
 
-import {LoginCmp} from './login/login.cmp';
-import {RegisterCmp} from './register/register.cmp';
+import {LoginComp} from './login/login.comp';
+import {RegisterComp} from './register/register.comp';
 
 const ROUTES: Routes = [
     {
         path: '',
         children: [
-            {path: 'login', component: LoginCmp},
-            {path: 'register', component: RegisterCmp}
+            {path: 'login', component: LoginComp},
+            {path: 'register', component: RegisterComp}
         ]
     }
 ]
@@ -22,8 +22,8 @@ const ROUTES: Routes = [
         RouterModule.forChild(ROUTES)
     ],
     declarations: [
-        LoginCmp,
-        RegisterCmp
+        LoginComp,
+        RegisterComp
     ]
 })
 

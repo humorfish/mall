@@ -10,6 +10,6 @@ export class HomeCmp implements OnInit
 
     ngOnInit()
     {
-        this.router.navigate(['/auth/register']);
+        this.router.navigate(['/auth/login']);
     }
 }
