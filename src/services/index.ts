@@ -3,6 +3,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 
+import {TApplication} from './application';
 
 export function createTranslateLoader(http: HttpClient) 
 {
@@ -17,9 +18,14 @@ export function createTranslateLoader(http: HttpClient)
     exports: [
         HttpClientModule,
         TranslateModule,
+    ],
+    providers:[
+        TApplication
     ]
 })
 
 export class ServiceModule
 {
 }
+
+export {TApplication}
