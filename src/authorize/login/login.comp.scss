@@ -1,4 +1,4 @@
-@import '../../assets/scss/base/app_base.scss';
+@import '../../assets/scss/base/app-base.scss';
 .c-login-wrapper {
     background: url('../../assets/img/login/login_bg.png');
     background: 100vw 100vh;
@@ -39,6 +39,16 @@
                         transform: rotateY(-360deg);
                     } 
                 }
+            }
+            hr {
+                padding-bottom: 5px;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                border: 0;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            .form-group {
+
             }
         }
     }

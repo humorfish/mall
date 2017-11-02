@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+//bootstrap
+@import './assets/scss/base/bootstrap-variables.scss';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+
+/*===============以下是自定义样式================*/
+//公共样式
+@import './assets/scss/base/app-base.scss';
+@import './assets/scss/base/common.scss'
