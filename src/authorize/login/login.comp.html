@@ -4,16 +4,45 @@
             <div class="card-body">
                 <div class="text-center c-login-header">
                     <img src="assets/img/logo.png" class="rounded-circle"/>
-                    <h3>{{'login_page.title'|translate}}</h3>
+                    <h3 class="card-title" style="display: inline">{{'login_page.title'|translate}}</h3>
                 </div><hr/>
-                <form [formGroup]="LoginForm">
+                <form #f="ngForm" (ngSubmit)="OnSubmit(f)" novalidate>
                     <div class="form-group row">
                         <div class="col-12">
-                            <input class="form-control" type="text" formControlName="UserName">
+                            <input class="form-control" type="text" name="UserName" ngModel required #UserName="ngModel" placeholder="{{'login_page.username_placeholder'|translate}}">
+                            <div class="c-validator-invalid" [hidden]="UserName.valid">
+                                {{'login_page.username_need_input'|translate}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input class="form-control" type="text" name="Password" ngModel required #Password="ngModel" placeholder="{{'login_page.password_placeholder'|translate}}">
+                            <div class="c-validator-invalid" [hidden]="Password.valid">
+                                {{'login_page.password_need_input'|translate}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary c-not-shadow" [disabled]="f.invalid">{{'login_page.login'|translate}}</button>
                         </div>
                     </div>
                 </form>
+                <div class="row">
+                    <div class="col-12 text-right">
+                        <a href="#">{{'login_page.forget_password'|translate}}</a>
+                    </div>
+                </div>
+                <div class="row c-copy-right">
+                    <div class="col-12 text-center">
+                        <p>{{'login_page.copy_right'|translate}}</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="c-login-desc">
+        {{'login_page.desc'|translate}}
     </div>
 </div>

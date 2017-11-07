@@ -48,10 +48,37 @@
                 border-top: 1px solid rgba(0, 0, 0, 0.1);
             }
             .form-group {
-                .form-control {
-                    
+                margin-top: 28px;
+                input {
+                    padding: 10px;
+                    line-height: 1.25;
+                }
+                button {
+                    width: 100%;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+            }
+            .c-copy-right {
+                margin-top: 10px;
+                height: 10px;
+                p {
+                    color: $c-color-black-secondary;
                 }
             }
         }
+    }
+    & > .c-login-desc {
+        max-width: 410px;
+        text-align: center;
+        font-size: 13px;
+        color: $c-color-gray-light;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 8px;
+        filter: alpha(opacity=8);
+        opacity: 0.8;
+        -moz-opacity: 0.8;
+        -webkit-opacity: 0.8;
     }
 }

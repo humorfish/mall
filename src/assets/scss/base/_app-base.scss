@@ -85,3 +85,32 @@ $c-bootstrap-dark-deep:#111111;
 $c-scrollbar-track:rgba(0, 0, 0, 0.06);
 $c-scrollbar-thumb:rgba(0, 0, 0, 0.08);
 $c-scrollbar-thumb-hover:rgba(0, 0, 0, 0.15);
+
+
+
+/*页面统一样式*/
+html,
+body {
+  font-size: 14px;
+  background-color: $c-color-primary;
+}
+/*添加手形*/
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .c-pointer {
+  cursor: pointer;
+}
+/*整体部分*/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+/*滑动轨道*/
+::-webkit-scrollbar-track {
+  background: $c-scrollbar-track;
+}
+/*滑块*/
+::-webkit-scrollbar-thumb {
+  background: $c-scrollbar-thumb;
+  &:hover {
+    background: $c-scrollbar-thumb-hover;
+  }
+}
