@@ -5,15 +5,21 @@
     width: 100vw;
     height: 100vh;
     background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
     & > .c-login-container {
-        padding-top: 11%;
+        padding: 11% 10% 0 10%;
         & > .c-login-box {
-            width: 410px;
-            padding: 20px;
+            padding: 20px 0;
             -webkit-box-shadow: $c-box-shadow;
             -moz-box-shadow: $c-box-shadow;
             box-shadow: $c-box-shadow;
             border: 0;
+            border-radius: 10px;
             background: $c-color-white;
             .c-login-header {
                 margin-bottom: 25px;
@@ -52,10 +58,12 @@
                 input {
                     padding: 10px;
                     line-height: 1.25;
+                    border-radius: 4px;
                 }
                 button {
                     width: 100%;
                     padding: 10px;
+                    border-radius: 4px;
                     cursor: pointer;
                 }
             }
@@ -76,6 +84,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 8px;
+        padding: 0 10px;
         filter: alpha(opacity=8);
         opacity: 0.8;
         -moz-opacity: 0.8;
