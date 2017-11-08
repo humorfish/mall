@@ -1,31 +1,31 @@
 <div class="c-login-wrapper animated fadeIn">
     <div class="row d-flex justify-content-center c-login-container">
-        <div class="col-xl-4 col-lg-5 col-md-6 card c-login-box">
+        <div class="col-xl-3 col-lg-5 col-md-6 card c-login-box">
             <div class="card-body">
                 <div class="text-center c-login-header">
                     <img src="assets/img/logo.png" class="rounded-circle"/>
                     <h3 class="card-title" style="display: inline">{{'login_page.title'|translate}}</h3>
                 </div><hr/>
-                <form #f="ngForm" (ngSubmit)="OnSubmit(f)" novalidate>
+                <form [formGroup]="LoginForms" novalidate>
                     <div class="form-group row">
                         <div class="col-12">
-                            <input class="form-control" type="text" name="UserName" ngModel required #UserName="ngModel" placeholder="{{'login_page.username_placeholder'|translate}}">
-                            <div class="c-validator-invalid" [hidden]="UserName.valid">
+                            <input class="form-control" type="text" formControlName="UserName" placeholder="{{'login_page.username_placeholder'|translate}}">
+                            <div class="c-validator-invalid" [hidden]="UserNameCtr.valid">
                                 {{'login_page.username_need_input'|translate}}
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-12">
-                            <input class="form-control" type="text" name="Password" ngModel required #Password="ngModel" placeholder="{{'login_page.password_placeholder'|translate}}">
-                            <div class="c-validator-invalid" [hidden]="Password.valid">
+                            <input class="form-control" type="password" formControlName="Password" placeholder="{{'login_page.password_placeholder'|translate}}">
+                            <div class="c-validator-invalid" [hidden]="PasswordCtr.valid">
                                 {{'login_page.password_need_input'|translate}}
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary c-not-shadow" [disabled]="f.invalid">{{'login_page.login'|translate}}</button>
+                            <button type="submit" class="btn btn-primary c-not-shadow" [disabled]="! LoginForms.valid">{{'login_page.login'|translate}}</button>
                         </div>
                     </div>
                 </form>
