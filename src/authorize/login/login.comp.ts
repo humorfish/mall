@@ -28,6 +28,13 @@ export class LoginComp implements OnInit
     {
     }
 
+    Login()
+    {
+        // console.log('Login.valid:' + this.LoginForms.valid);
+        
+        
+    }
+
     LoginForms: FormGroup;
     UserNameCtr: FormControl;
     PasswordCtr: FormControl;

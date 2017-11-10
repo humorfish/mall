@@ -1,5 +1,6 @@
 import {Injectable, Injector} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {ToastService, ToastType, ToastConfig} from '../shared/toast';
 
 declare global
 {
@@ -20,8 +21,13 @@ export class TApplication
         window.App = this;
         this.Translation = injector.get(TranslateService);
         this.InitLanguage();
+
+        this.ToastService = injector.get(ToastService);
     }
 
+    /**
+     * Language
+     */
     private InitLanguage()
     {
         this.Translation.addLangs(['en', 'zh']);
@@ -33,5 +39,22 @@ export class TApplication
             this.Translation.use('zh');
     }
 
+    /**
+     * Toast
+     */
+    ShowToast(message: string, type?: ToastType): Promise<void>
+    {
+        switch (type) 
+        {
+            case ToastType.INFO:
+                this.ToastService.Info(message);
+                break;
+        
+            default:
+                break;
+        }
+    }
+
     private Translation: TranslateService;
+    private ToastService: ToastService;
 }

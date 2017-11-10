@@ -1,0 +1,11 @@
+@import '../../assets/scss/base/app-base.scss';
+
+.c-toast {
+    border: 0;
+    border-radius: 20px;
+    -webkit-box-shadow: $c-toast-box;
+    -moz-box-shadow: $c-toast-box;
+    -ms-box-shadow: $c-toast-box;
+    -o-box-shadow: $c-toast-box;
+    box-shadow: $c-toast-box;
+}
