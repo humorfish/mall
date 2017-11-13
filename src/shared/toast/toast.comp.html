@@ -1,5 +1,7 @@
 <div class="alert text-white c-toast" [ngClass]="BgStyle">
-    <button>
-
+    <button type="button" class="close" data-dismiss="Config" aria-label="Close" (click)="Dismiss()">
+        <span aria-hidden="true">&times;</span>
     </button>
+    <i class="fa" [ngClass]="FaStyle"></i>
+    <strong>{{Config.GetMessage()}}</strong>
 </div>

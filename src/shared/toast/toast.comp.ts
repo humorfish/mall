@@ -42,6 +42,39 @@ export class ToastComp implements OnInit
         return RetVal;
     }
 
+    get FaStyle(): Object
+    {
+        let RetVal = 'bg-info';
+        
+        if (this.Config !== undefined)
+        {
+            switch (this.Config.GetToastType()) 
+            {
+                case ToastType.SUCCESS:
+                    RetVal = 'fa-check-circle';
+                    break;
+                case ToastType.INFO:
+                    RetVal = 'fa-info-circle';
+                    break;
+                case ToastType.WARNING:
+                    RetVal = 'fa-warning';
+                    break;
+                case ToastType.ERROR:
+                    RetVal = 'fa-times-circle';
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+
+        return RetVal;
+    }
+
+    Dismiss()
+    {
+    }
+
     @Input() Config = new ToastConfig(ToastType.INFO, '');
     
     @Output() Dismissed = new EventEmitter();

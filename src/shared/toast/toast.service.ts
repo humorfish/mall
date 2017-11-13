@@ -1,6 +1,8 @@
 import {Injectable} from "@angular/core";
 
+import {Subject} from "rxjs/Subject";
 import {ToastConfig, ToastType} from "./toast.model";
+
 
 @Injectable()
 export class ToastService 
@@ -9,27 +11,10 @@ export class ToastService
     {
     }
 
-    Success(message: string)
+    Show(Config: ToastConfig)
     {
-        this.Show(new ToastConfig(ToastType.SUCCESS, message));
+        this.ToastSub.next(Config);
     }
 
-    Info(message: string)
-    {
-
-    }
-
-    Warning(message: string)
-    {
-
-    }
-
-    Error(message: string)
-    {
-
-    }
-
-    private Show(config: ToastConfig): Promise<void>
-    {
-    }
+    private ToastSub = new Subject<ToastConfig>();
 }

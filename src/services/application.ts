@@ -42,17 +42,17 @@ export class TApplication
     /**
      * Toast
      */
-    ShowToast(message: string, type?: ToastType): Promise<void>
+    ShowToast(Message: string, Type?: ToastType)
     {
-        switch (type) 
-        {
-            case ToastType.INFO:
-                this.ToastService.Info(message);
-                break;
-        
-            default:
-                break;
-        }
+        let _Type = Type;
+        if (_Type === undefined)
+            _Type = ToastType.INFO
+        return this.ToastService.Show(new ToastConfig(_Type, Message));
+    }
+
+    ShowError(Message: string)
+    {
+        return this.ShowToast(Message, ToastType.ERROR);
     }
 
     private Translation: TranslateService;
