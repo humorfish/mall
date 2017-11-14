@@ -1,4 +1,5 @@
-<div class="c-toast-container">
-    
-    <c-toast></c-toast>
+<div class="c-toast-container" [ngClass]="ToastPosition">
+    <div *ngFor="let Config of ToastConfigs" [@ToastBoxTrigger]="ToastAnimation">
+        <c-toast [Config]="Confing" (Dismissed)="Remove(Config)"></c-toast>
+    </div>
 </div>
