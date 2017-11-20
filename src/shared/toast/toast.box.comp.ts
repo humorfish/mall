@@ -34,9 +34,9 @@ import {ToastService} from "./toast.service";
 export class ToastBoxComp
 {
     constructor(private ToastSvc: ToastService)
-    {
+    {   
         this.ToastSvc.Subscribe().forEach(config =>
-        {
+        {   
             this.ToastConfigs.unshift(config);
         });
     }

@@ -2,7 +2,7 @@
 import {Component, OnInit, Input, Output, EventEmitter} from "@angular/core";
 import {ToastType, ToastConfig} from "./toast.model";
 
-@Component({selector: 'c-toast', templateUrl: 'toast.comp.html', styleUrls: ['toast.comp.css']})
+@Component({selector: 'c-toast', templateUrl: 'toast.comp.html', styleUrls: ['toast.comp.scss']})
 export class ToastComp implements OnInit
 {
     constructor()
@@ -73,6 +73,7 @@ export class ToastComp implements OnInit
 
     Dismiss()
     {
+        this.Dismissed.emit();
     }
 
     @Input() Config = new ToastConfig(ToastType.INFO, '');

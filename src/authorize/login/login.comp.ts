@@ -26,6 +26,7 @@ export class LoginComp implements OnInit
 
     ngOnInit()
     {
+        App.ShowToast('hello world');
     }
 
     Login()
@@ -35,6 +36,7 @@ export class LoginComp implements OnInit
         
     }
 
+    App = window.App;
     LoginForms: FormGroup;
     UserNameCtr: FormControl;
     PasswordCtr: FormControl;

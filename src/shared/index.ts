@@ -3,6 +3,11 @@ import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TranslateModule} from '@ngx-translate/core';
 
+// toast
+import {ToastService} from './toast/toast.service';
+import {ToastBoxComp} from './toast/toast.box.comp';
+import {ToastComp} from './toast/toast.comp';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -14,9 +19,16 @@ import {TranslateModule} from '@ngx-translate/core';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        TranslateModule
+        TranslateModule,
+        ToastBoxComp
+    ],
+    declarations: [
+        ToastBoxComp,
+        ToastComp
+    ],
+    providers: [
+        ToastService
     ]
-
 })
 
 export class SharedModule

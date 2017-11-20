@@ -3,10 +3,10 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {SharedModule} from '../shared';
 
-import {HomeCmp} from './home.cmp';
+import {HomeComp} from './home.comp';
 
 const ROUTES: Routes = [
-    {path: '', component: HomeCmp}
+    {path: '', component: HomeComp}
 ]
 
 @NgModule({
@@ -15,7 +15,7 @@ const ROUTES: Routes = [
         SharedModule
     ],
     declarations: [
-        HomeCmp,
+        HomeComp,
     ]
 })
 

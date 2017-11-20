@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {Routes, RouterModule} from '@angular/router';
 
 import {ServiceModule} from '../services';
+import {SharedModule} from '../shared';
 
 import {AppComponent} from './app.component';
 
@@ -22,10 +23,11 @@ const ROUTES: Routes = [
       BrowserAnimationsModule,
       RouterModule.forRoot(ROUTES),
       ServiceModule,
+      SharedModule
     ],
     providers: [],
     bootstrap: [AppComponent]
 })
-export class AppModule 
+export class AppModule
 {
 }
