@@ -44,6 +44,11 @@ export class ToastConfig
         return this.AutoDismissTime;
     }
 
+    isAutoDismissing()
+    {
+        return this.AutoDismissTime > 0;
+    }
+
     IsDismissable(): boolean
     {
         return this.Dismissable;
