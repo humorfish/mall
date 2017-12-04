@@ -4,7 +4,7 @@ import {TApplication} from '../services';
 @Component({
   selector: 'app-root',
   template: `<router-outlet></router-outlet>
-            <c-toast-box toastAnimation="fancy"></c-toast-box>`
+            <c-toast-box ToastAnimation="fancy"></c-toast-box>`
 })
 export class AppComponent 
 {

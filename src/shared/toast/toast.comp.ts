@@ -11,6 +11,8 @@ export class ToastComp implements OnInit
 
     ngOnInit()
     {
+        if (this.Config.GetAutoDismissTime())
+            setTimeout(() => this.Dismiss(), this.Config.GetAutoDismissTime());
     }
 
     get BgStyle(): Object
