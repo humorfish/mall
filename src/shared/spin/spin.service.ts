@@ -5,12 +5,22 @@ import {Subject} from 'rxjs/Subject';
  * spin
  */
 
- @Injectable()
- export class SpinService
- {
-     constructor()
-     {
-     }
+@Injectable()
+export class SpinService
+{
+    constructor()
+    {
+    }
 
-     private SpinSub: Subject<boolean> = new Subject<boolean>();
- }
+    Subscribe(): Subject<boolean>
+    {
+        return this.SpinSub;
+    }
+
+    Spin(ShowSpin: boolean): void
+    {
+        this.SpinSub.next(ShowSpin);
+    }
+
+    private SpinSub: Subject<boolean> = new Subject<boolean>();
+}
