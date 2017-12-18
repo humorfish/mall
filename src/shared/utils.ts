@@ -125,6 +125,56 @@ export class Utils
      }
 
      /**
+     * 获得尺寸
+     * @param element 
+     */
+    static getHiddenElementDimensions(element: any): any 
+    {
+        let dimensions: any = {};
+        element.style.visibility = 'hidden';
+        element.style.display = 'block';
+        dimensions.width = element.offsetWidth;
+        dimensions.height = element.offsetHeight;
+        element.style.display = 'none';
+        element.style.visibility = 'visible';
+
+        return dimensions;
+    }
+
+    /**
+     * 获得视图大小
+     */
+    static getViewport(): any 
+    {
+        let win = window,
+            d = document,
+            e = d.documentElement,
+            g = d.getElementsByTagName('body')[0],
+            w = win.innerWidth || e.clientWidth || g.clientWidth,
+            h = win.innerHeight || e.clientHeight || g.clientHeight;
+
+        return { width: w, height: h };
+    }
+
+    /**
+     * 获得窗口滚动高度
+     */
+    static getWindowScrollTop(): number 
+    {
+        let doc = document.documentElement;
+        return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    }
+
+    /**
+     * 获得窗口滚动宽度
+     */
+    static getWindowScrollLeft(): number 
+    {
+        let doc = document.documentElement;
+        return (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
+    }
+
+     /**
      * position
      * @param element 
      * @param target 
