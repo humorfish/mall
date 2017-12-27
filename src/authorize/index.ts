@@ -16,10 +16,11 @@ const ROUTES: Routes = [
             {path: 'register', component: RegisterComp}
         ]
     }
-]
+];
 
 @NgModule({
     imports: [
+        BrowserModule,
         FormsModule,
         RouterModule.forChild(ROUTES),
         SharedModule

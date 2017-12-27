@@ -1,6 +1,6 @@
 
-import {Component, OnInit, Input, Output, EventEmitter} from "@angular/core";
-import {ToastType, ToastConfig} from "./toast.model";
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {ToastType, ToastConfig} from './toast.model';
 
 @Component({selector: 'c-toast', templateUrl: 'toast.comp.html', styleUrls: ['toast.comp.scss']})
 export class ToastComp implements OnInit
@@ -18,10 +18,10 @@ export class ToastComp implements OnInit
     get BgStyle(): Object
     {
         let RetVal = 'bg-info';
-        
+
         if (this.Config !== undefined)
         {
-            switch (this.Config.GetToastType()) 
+            switch (this.Config.GetToastType())
             {
                 case ToastType.SUCCESS:
                     RetVal = 'bg-success';
@@ -35,7 +35,7 @@ export class ToastComp implements OnInit
                 case ToastType.ERROR:
                     RetVal = 'bg-error';
                     break;
-            
+
                 default:
                     break;
             }
@@ -47,10 +47,10 @@ export class ToastComp implements OnInit
     get FaStyle(): Object
     {
         let RetVal = 'bg-info';
-        
+
         if (this.Config !== undefined)
         {
-            switch (this.Config.GetToastType()) 
+            switch (this.Config.GetToastType())
             {
                 case ToastType.SUCCESS:
                     RetVal = 'fa-check-circle';
@@ -64,7 +64,7 @@ export class ToastComp implements OnInit
                 case ToastType.ERROR:
                     RetVal = 'fa-times-circle';
                     break;
-            
+
                 default:
                     break;
             }
@@ -79,6 +79,7 @@ export class ToastComp implements OnInit
     }
 
     @Input() Config = new ToastConfig(ToastType.INFO, '');
-    
+
     @Output() Dismissed = new EventEmitter();
+
 }

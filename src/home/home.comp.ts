@@ -4,13 +4,14 @@ import {Router} from '@angular/router';
 @Component({selector: 'c-home', templateUrl: 'home.comp.html'})
 export class HomeComp implements OnInit
 {
-    constructor(private router: Router)
+    constructor(public router: Router)
     {
     }
 
     ngOnInit()
     {
         // this.router.navigate(['/auth/login']);
+        this.router.navigate(['chart']);
     }
 
     Toast()

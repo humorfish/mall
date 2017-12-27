@@ -6,7 +6,7 @@ export class LoginComp implements OnInit
 {
     constructor()
     {
-        this.UserNameCtr = new FormControl('', 
+        this.UserNameCtr = new FormControl('',
         {
             validators: Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(15)]),
             updateOn: 'change'
@@ -32,8 +32,6 @@ export class LoginComp implements OnInit
     Login()
     {
         // console.log('Login.valid:' + this.LoginForms.valid);
-        
-        
     }
 
     App = window.App;

@@ -4,10 +4,16 @@ import {Routes, RouterModule} from '@angular/router';
 import {SharedModule} from '../shared';
 
 import {HomeComp} from './home.comp';
+import {ChartComp} from './chart/chart';
 
 const ROUTES: Routes = [
-    {path: '', component: HomeComp}
-]
+    {
+        path: '', component: HomeComp
+    },
+    {
+        path: 'chart', component: ChartComp
+    }
+];
 
 @NgModule({
     imports: [
@@ -16,6 +22,13 @@ const ROUTES: Routes = [
     ],
     declarations: [
         HomeComp,
+        ChartComp
+    ],
+    entryComponents: [
+        ChartComp
+    ],
+    exports: [
+        ChartComp
     ]
 })
 

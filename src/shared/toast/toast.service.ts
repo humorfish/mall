@@ -1,10 +1,10 @@
-import {Injectable} from "@angular/core";
+import {Injectable} from '@angular/core';
 
-import {ToastConfig, ToastType} from "./toast.model";
-import {Subject, Observable} from "rxjs";
+import {Subject, Observable} from 'Rxjs';
+import {ToastConfig} from './toast.model';
 
 @Injectable()
-export class ToastService 
+export class ToastService
 {
     constructor()
     {

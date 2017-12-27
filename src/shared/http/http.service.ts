@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Utils} from '../utils';
 import {
-    Http, Response, Headers, RequestOptions, URLSearchParams, RequestOptionsArgs, RequestMethod
+    Http, Headers, RequestOptions, URLSearchParams, RequestMethod
 } from '@angular/http';
 
 @Injectable()
@@ -83,14 +83,14 @@ export class HttpService
     {
         if (Utils.IsEmpty(paramMap))
             return paramMap;
-     
+
         let params = new URLSearchParams();
-        for(let key in paramMap)
+        for (let key in paramMap)
         {
             let val = paramMap[key];
             if (val instanceof Date)
                 val = Utils.DateFormate(val);
-            
+
             params.set(key, val);
         }
 
@@ -103,5 +103,5 @@ interface HttpOptions
     url?: string;
     body?: any;
     paramMap?: any;
-    headers?: any;  
+    headers?: any;
 }

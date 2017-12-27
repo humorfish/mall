@@ -14,7 +14,7 @@ declare global
 }
 
 @Injectable()
-export class TApplication 
+export class TApplication
 {
     constructor(injector: Injector)
     {
@@ -46,7 +46,7 @@ export class TApplication
     {
         let _Type = Type;
         if (_Type === undefined)
-            _Type = ToastType.INFO
+            _Type = ToastType.INFO;
         return this.ToastService.Show(new ToastConfig(_Type, Message));
     }
 

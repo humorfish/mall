@@ -6,7 +6,7 @@ import {TApplication} from '../services';
   template: `<router-outlet></router-outlet>
             <c-toast-box ToastAnimation="fancy"></c-toast-box>`
 })
-export class AppComponent 
+export class AppComponent
 {
     constructor(App: TApplication)
     {

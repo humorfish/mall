@@ -1,19 +1,31 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ]
-  }
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": false,
+      "noImplicitThis": true,
+      "alwaysStrict": true,
+
+      "noUnusedLocals": true,
+      "noImplicitReturns": false,
+      "noFallthroughCasesInSwitch": false,
+
+      "allowSyntheticDefaultImports": true,
+      "declaration": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "lib": ["dom","es2015", "es6"],
+      "module": "es2015",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "target": "es5"
+  },
+  "include": [
+      "src/**/*.ts"
+  ],
+  "exclude": [
+      "node_modules", "**/nodejs.*.ts", "**/Mqtt.ts"
+  ],
+  "compileOnSave": false,
+  "atom": {"rewriteTsconfig": false}
 }

@@ -6,7 +6,7 @@ export class SpinComp
 {
     constructor(private Spin: SpinService)
     {
-        this.Spin.GetSpin().forEach((ShowSpin: boolean) => 
+        this.Spin.Subscribe().forEach((ShowSpin: boolean) =>
         {
             if (ShowSpin)
                 this.OpenSpin();

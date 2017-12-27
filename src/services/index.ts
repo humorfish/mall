@@ -2,11 +2,11 @@ import {NgModule} from '@angular/core';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {TApplication} from './application';
 
-export function createTranslateLoader(http: HttpClient) 
+export function createTranslateLoader(http: HttpClient)
 {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -22,7 +22,7 @@ export function createTranslateLoader(http: HttpClient)
         HttpClientModule,
         TranslateModule,
     ],
-    providers:[
+    providers: [
         TApplication
     ]
 })
@@ -31,4 +31,4 @@ export class ServiceModule
 {
 }
 
-export {TApplication}
+export {TApplication};
