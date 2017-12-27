@@ -469,7 +469,7 @@ export class CoreHelper extends THelpers
     }
 
     // -- DOM methods
-    GetRelativePosition(evt: any, chart: any): {}
+    GetRelativePosition(evt: any, chart: any): any
     {
         let mouseX, mouseY;
         let e = evt.originalEvent || evt;
