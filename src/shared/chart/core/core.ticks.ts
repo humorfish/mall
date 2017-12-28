@@ -12,7 +12,7 @@ export class Ticks
  * Namespace to hold formatters for different types of ticks
  * @namespace Chart.Ticks.formatters
  */
-class Formatters
+export class Formatters
 {
     constructor(private helper: CoreHelper)
     {
@@ -74,9 +74,12 @@ class Formatters
     {
         let remain = tickValue / (Math.pow(10, Math.floor(this.helper.Log10(tickValue))));
 
-        if (tickValue === 0) {
+        if (tickValue === 0)
+        {
             return '0';
-        } else if (remain === 1 || remain === 2 || remain === 5 || index === 0 || index === ticks.length - 1) {
+        }
+        else if (remain === 1 || remain === 2 || remain === 5 || index === 0 || index === ticks.length - 1)
+        {
             return tickValue.toExponential();
         }
         return '';
@@ -87,7 +90,7 @@ class Formatters
  * Namespace to hold generators for different types of ticks
  * @namespace Chart.Ticks.generators
  */
-class Generators
+export class Generators
 {
     constructor(private helper: CoreHelper)
     {
