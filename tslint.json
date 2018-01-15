@@ -63,6 +63,5 @@
         "component-selector": [false, "element", "app", "kebab-case"],
         "component-class-suffix": false,
         "use-isnan": true
-        // "deprecation": true // @Deprecate
     }
   }

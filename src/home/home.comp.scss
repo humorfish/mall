@@ -1,0 +1,30 @@
+@import '../../assets/scss/base/app-base.scss';
+
+/**
+ * home
+ */
+
+.c-wrapper {
+    width: 100%;
+    height: 100vh;
+    .c-left-wrapper {
+        height: 100vh;
+        background-color: $c-color-primary;
+        float: left;
+        display: block;
+        .c-header-profile {
+            width: 235px;
+            height: 125px;
+            margin-top: 20px;
+            text-align: center;
+            img {
+                width: 88px;
+                height: 88px;
+                -webkit-box-shadow: $c-img-shadow;
+                -moz-box-shadow: $c-img-shadow;
+                box-shadow: $c-img-shadow;
+                cursor: pointer;
+            }
+        }
+    }
+}

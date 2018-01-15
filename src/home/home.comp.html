@@ -1,4 +1,21 @@
-<div style="color: blue">HOME</div>
-<div>
-    <button type="buttom" (click)="Toast()">Toast</button>
+<div class="c-wrapper">
+    <div class="c-left-wrapper" >
+        <div class="c-header">
+            <img src="assets/img/logo.png"/>
+            <h3>{{'common.title'|translate}}</h3>
+        </div>
+        <div class="c-header-profile">
+            <div ngbDropdown>
+                <img alt="image" class="rounded-circle"/>
+                <div class="c-user-profile">
+                    <span ngbDropdownToggle>aaa</span>
+                </div>
+                <div ngbDropdownMenu class="dropdown-menu animated fadeIn">
+                    <button class="dropdown-item"><i class="fa fa-user-circle-o fa-fw">{{'home_page.persional_info'|translate}</i></button>
+                    <button class="dropdown-item"><i class="fa fa-key fa-fw">{{'home_page.persional_info'|translate}</i></button>
+                    <button class="dropdown-item"><i class="fa fa-sign-out fa-fw">{{'home_page.persional_info'|translate}</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

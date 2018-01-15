@@ -10,13 +10,8 @@ export class HomeComp implements OnInit
 
     ngOnInit()
     {
-        // this.router.navigate(['/auth/login']);
-        this.router.navigate(['chart']);
-    }
-
-    Toast()
-    {
-        App.ShowToast('aaaa');
+        this.router.navigate(['/auth/login']);
+        // this.router.navigate(['chart']);
     }
 
     App = window.App;

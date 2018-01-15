@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
+import {Location} from '@angular/common';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({selector: 'c-login', templateUrl: 'login.comp.html', styleUrls: ['login.comp.scss']})
 export class LoginComp implements OnInit
 {
-    constructor()
+    constructor(private _location: Location)
     {
         this.UserNameCtr = new FormControl('',
         {
@@ -32,6 +33,7 @@ export class LoginComp implements OnInit
     Login()
     {
         // console.log('Login.valid:' + this.LoginForms.valid);
+        this._location.back();
     }
 
     App = window.App;

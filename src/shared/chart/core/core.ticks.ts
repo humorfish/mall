@@ -1,4 +1,4 @@
-import { CoreHelper } from "./core.helper";
+import { CoreHelper } from './core.helper';
 
 export class Ticks
 {
