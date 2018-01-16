@@ -20,7 +20,7 @@ export class Utils
 
     static IsObject(value: number): boolean
     {
-        return typeof value === 'object' && !Utils.IsArray(value);    
+        return typeof value === 'object' && !Utils.IsArray(value);
     }
 
     static replaceUrl(url: string)
@@ -64,17 +64,17 @@ export class Utils
         Time.Year = date.getFullYear();
         Time.TYear = String(Time.Year).substr(2);
         Time.Month = date.getMonth() + 1;
-        Time.TMonth = Time.Month < 10 ? "0" + Time.Month : String(Time.Month);
+        Time.TMonth = Time.Month < 10 ? '0' + Time.Month : String(Time.Month);
         Time.Day = date.getDate();
-        Time.TDay = Time.Day < 10 ? "0" + Time.Day : String(Time.Day);
+        Time.TDay = Time.Day < 10 ? '0' + Time.Day : String(Time.Day);
         Time.Hour = date.getHours();
-        Time.THour = Time.Hour < 10 ? "0" + Time.Hour : String(Time.Hour);
+        Time.THour = Time.Hour < 10 ? '0' + Time.Hour : String(Time.Hour);
         Time.hour = Time.Hour < 13 ? Time.Hour : Time.Hour - 12;
-        Time.Thour = Time.hour < 10 ? "0" + Time.hour : String(Time.hour);
+        Time.Thour = Time.hour < 10 ? '0' + Time.hour : String(Time.hour);
         Time.Minute = date.getMinutes();
-        Time.TMinute = Time.Minute < 10 ? "0" + Time.Minute : String(Time.Minute);
+        Time.TMinute = Time.Minute < 10 ? '0' + Time.Minute : String(Time.Minute);
         Time.Second = date.getSeconds();
-        Time.TSecond = Time.Second < 10 ? "0" + Time.Second : String(Time.Second);
+        Time.TSecond = Time.Second < 10 ? '0' + Time.Second : String(Time.Second);
         Time.Millisecond = date.getMilliseconds();
 
         return format.replace(/yyyy/ig, String(Time.Year))
@@ -93,7 +93,7 @@ export class Utils
         .replace(/m/g, String(Time.Minute))
         .replace(/ss/ig, Time.TSecond)
         .replace(/s/ig, String(Time.Second))
-        .replace(/fff/ig, String(Time.Millisecond))
+        .replace(/fff/ig, String(Time.Millisecond));
     }
 
     /**
@@ -105,7 +105,7 @@ export class Utils
         return 'xxxxxxxx-xxxx-6xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) =>
         {
            let r = Math.random() * 16 | 0;
-           let v = c == 'x' ? r : (r & 0x3 | 0x8);
+           let v = c === 'x' ? r : (r & 0x3 | 0x8);
            return v.toString(16);
         });
     }
@@ -116,19 +116,19 @@ export class Utils
 
      static ShortUUID(): string
      {
-        return 'xx-6xy'.replace(/[xy]/g, (c)=> 
+        return 'xx-6xy'.replace(/[xy]/g, (c) =>
         {
             let r = Math.random() * 16 | 0;
-            let v = c == 'x' ? r : (r & 0x3 | 0x8);
+            let v = c === 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(6);
         });
      }
 
      /**
      * 获得尺寸
-     * @param element 
+     * @param element
      */
-    static getHiddenElementDimensions(element: any): any 
+    static getHiddenElementDimensions(element: any): any
     {
         let dimensions: any = {};
         element.style.visibility = 'hidden';
@@ -144,7 +144,7 @@ export class Utils
     /**
      * 获得视图大小
      */
-    static getViewport(): any 
+    static getViewport(): any
     {
         let win = window,
             d = document,
@@ -159,7 +159,7 @@ export class Utils
     /**
      * 获得窗口滚动高度
      */
-    static getWindowScrollTop(): number 
+    static getWindowScrollTop(): number
     {
         let doc = document.documentElement;
         return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
@@ -168,7 +168,7 @@ export class Utils
     /**
      * 获得窗口滚动宽度
      */
-    static getWindowScrollLeft(): number 
+    static getWindowScrollLeft(): number
     {
         let doc = document.documentElement;
         return (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
@@ -176,10 +176,10 @@ export class Utils
 
      /**
      * position
-     * @param element 
-     * @param target 
+     * @param element
+     * @param target
      */
-    static AbsolutePosition(element: any, target: any): void 
+    static AbsolutePosition(element: any, target: any): void
     {
         let elementDimensions = element.offsetParent ? { width: element.offsetWidth, height: element.offsetHeight } : this.getHiddenElementDimensions(element);
         let elementOuterHeight = elementDimensions.height;
@@ -192,12 +192,12 @@ export class Utils
         let viewport = this.getViewport();
         let top, left;
 
-        if (targetOffset.top + targetOuterHeight + elementOuterHeight > viewport.height) 
+        if (targetOffset.top + targetOuterHeight + elementOuterHeight > viewport.height)
         {
             top = targetOffset.top + windowScrollTop - elementOuterHeight;
-            if(top < 0) 
+            if (top < 0)
                 top = 0 + windowScrollTop;
-        } 
+        }
         else
         {
             top = targetOuterHeight + targetOffset.top + windowScrollTop;
@@ -214,9 +214,9 @@ export class Utils
 
     /**
      * size
-     * @param element 
+     * @param element
      */
-    static GetHiddenElementDimensions(element: any): any 
+    static GetHiddenElementDimensions(element: any): any
     {
         let dimensions: any = {};
         element.style.visibility = 'hidden';
@@ -232,7 +232,7 @@ export class Utils
     /**
      * view size
      */
-    static GetViewport(): any 
+    static GetViewport(): any
     {
         let win = window,
             d = document,
@@ -247,16 +247,16 @@ export class Utils
     /**
      * View scroll height
      */
-    static GetWindowScrollTop(): number 
+    static GetWindowScrollTop(): number
     {
         let doc = document.documentElement;
         return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
     }
 
     /**
-     * View scroll width 
+     * View scroll width
      */
-    static GetWindowScrollLeft(): number 
+    static GetWindowScrollLeft(): number
     {
         let doc = document.documentElement;
         return (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
@@ -264,31 +264,31 @@ export class Utils
 
      /**
      * true position
-     * @param element 
-     * @param target 
+     * @param element
+     * @param target
      */
-    static RelativePosition(element: any, target: any): void 
+    static RelativePosition(element: any, target: any): void
     {
         let elementDimensions = element.offsetParent ? { width: element.offsetWidth, height: element.offsetHeight } : this.GetHiddenElementDimensions(element);
         let targetHeight = target.offsetHeight;
         let targetWidth = target.offsetWidth;
         let targetOffset = target.getBoundingClientRect();
-        let windowScrollTop = this.GetWindowScrollTop();
+        // let windowScrollTop = this.GetWindowScrollTop();
         let viewport = this.GetViewport();
         let top, left;
-        
-        if ((targetOffset.top + targetHeight + elementDimensions.height) > viewport.height) 
+
+        if ((targetOffset.top + targetHeight + elementDimensions.height) > viewport.height)
         {
             top = -1 * (elementDimensions.height);
-            if(targetOffset.top + top < 0)
+            if (targetOffset.top + top < 0)
                 top = 0;
         }
-        else 
+        else
         {
             top = targetHeight;
         }
-            
-            
+
+
         if ((targetOffset.left + elementDimensions.width) > viewport.width)
             left = targetWidth - elementDimensions.width;
         else

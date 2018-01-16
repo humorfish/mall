@@ -1,11 +1,11 @@
 /**
  * type
  */
-export enum ToastType 
+export enum ToastType
 {
-    SUCCESS, 
-    INFO, 
-    WARNING, 
+    SUCCESS,
+    INFO,
+    WARNING,
     ERROR
 }
 
@@ -19,11 +19,11 @@ export class ToastConfig
     {
         this.Type = type;
         this.Message = message;
-        
+
         this.AutoDismissTime = AutoDismissTime;
         if (this.AutoDismissTime === undefined)
             this.AutoDismissTime = 1000;
-        
+
         this.Dismissable = dismissable;
         if (this.Dismissable === undefined)
             this.Dismissable = true;

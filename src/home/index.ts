@@ -4,14 +4,11 @@ import {Routes, RouterModule} from '@angular/router';
 import {SharedModule} from '../shared';
 
 import {HomeComp} from './home.comp';
-import {ChartComp} from './chart/chart';
+import {TreaViewMenuComp} from './treeview.menu.comp';
 
 const ROUTES: Routes = [
     {
         path: '', component: HomeComp
-    },
-    {
-        path: 'chart', component: ChartComp
     }
 ];
 
@@ -22,13 +19,13 @@ const ROUTES: Routes = [
     ],
     declarations: [
         HomeComp,
-        ChartComp
+        TreaViewMenuComp
     ],
     entryComponents: [
-        ChartComp
+        TreaViewMenuComp
     ],
     exports: [
-        ChartComp
+        TreaViewMenuComp
     ]
 })
 

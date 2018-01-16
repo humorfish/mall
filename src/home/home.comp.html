@@ -6,7 +6,7 @@
         </div>
         <div class="c-header-profile">
             <div ngbDropdown>
-                <img alt="image" class="rounded-circle"/>
+                <img alt="image" class="rounded-circle" [src]="mainData.userData.userAvatar"/>
                 <div class="c-user-profile">
                     <span ngbDropdownToggle>aaa</span>
                 </div>
@@ -17,5 +17,6 @@
                 </div>
             </div>
         </div>
+        <c-sidebar-menu [data]="mainData.menuData"></c-sidebar-menu>
     </div>
 </div>

@@ -9,7 +9,7 @@ import {SharedModule} from '../shared';
 import {AppComponent} from './app.component';
 
 const ROUTES: Routes = [
-    {path: '', redirectTo: 'home', pathMatch: 'full' },
+    {path: '', redirectTo: '/home', pathMatch: 'full' },
     {path: 'home', loadChildren: '../home/index#HomeModule'},
     {path: 'auth', loadChildren: '../authorize/index#AuthorizeModule'}
 ];

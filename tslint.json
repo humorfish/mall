@@ -62,6 +62,7 @@
         "directive-selector": [false, "attribute", "app", "camelCase"],
         "component-selector": [false, "element", "app", "kebab-case"],
         "component-class-suffix": false,
-        "use-isnan": true
+        "use-isnan": true,
+        "deprecation": true // @Deprecate
     }
-  }
+}

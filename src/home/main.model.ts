@@ -5,6 +5,9 @@ export class MainData
 {
     // user data
     userData: UserData;
+
+    // 菜单数据
+    menuData: Array<MenuData>;
 }
 
 /**
