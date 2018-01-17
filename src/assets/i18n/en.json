@@ -1,5 +1,21 @@
 {
+    "common": {
+        "title": "后台管理系统登录",
+        "search_menu": "搜索菜单...",
+        "search_not_exist": "搜索的菜单不存在..."
+    },
     "login_page": {
-        "title": "后台管理系统登录"
+        "title": "后台管理系统登录",
+        "username_placeholder": "请输入用户名...",
+        "password_placeholder": "请输入密码...",
+        "username_need_input": "用户名必填，6-15位！",
+        "password_need_input": "密码必填，6-15位！",
+        "login": "登录",
+        "forget_password": "忘记密码？",
+        "copy_right": "Copyright 2017 cjh. All Rights Reserved. ",
+        "desc": "系统仅支持Edge、Google Chrome、Mozilla Firefox以及其它主流的浏览器，如您的浏览器无法使用本系统，请更换其它浏览器！"
+    },
+    "home_page": {
+        "persional_info": "个人资料"
     }
 }

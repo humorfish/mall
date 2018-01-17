@@ -1,10 +1,11 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import {SharedModule} from '../shared';
+import { SharedModule } from '../shared';
 
-import {HomeComp} from './home.comp';
-import {TreaViewMenuComp} from './treeview.menu.comp';
+import { HomeComp } from './home.comp';
+import { TreaViewMenuComp } from './treeview.menu.comp';
+import { SidebarMenuComp } from './sidebar.menu.comp';
 
 const ROUTES: Routes = [
     {
@@ -19,13 +20,16 @@ const ROUTES: Routes = [
     ],
     declarations: [
         HomeComp,
-        TreaViewMenuComp
+        TreaViewMenuComp,
+        SidebarMenuComp
     ],
     entryComponents: [
-        TreaViewMenuComp
+        TreaViewMenuComp,
+        SidebarMenuComp
     ],
     exports: [
-        TreaViewMenuComp
+        TreaViewMenuComp,
+        SidebarMenuComp
     ]
 })
 
