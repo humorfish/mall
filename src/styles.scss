@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ===== third part lib css*/
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import '../node_modules/animate.css/animate.min.css';
+
 //bootstrap
 @import './assets/scss/base/bootstrap-variables.scss';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
