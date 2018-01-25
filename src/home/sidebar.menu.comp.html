@@ -1,6 +1,6 @@
 <div class="c-nav-search">
     <div class="input-group">
-        <input type="text" class="from-control" placeholder="{{'common.search_menu'|translate}}" (input)="inputSearchText($event)">
+        <input type="text" class="form-control" placeholder="{{'common.search_menu'|translate}}" (input)="inputSearchText($event)">
         <span class="input-group-btn">
             <button class="btn btn-info c-not-shadow" type="button" (click)="searchMenu()">
                 <i class="fa fa-search fa-fw"></i>
@@ -14,6 +14,7 @@
         <li *ngFor="let item of data">
             <a (click)="itemClicked(item)">
                 <i style="margin-top: 3px; width: 17px" class="fa pull-right" [ngClass]="iconStyle(item)"></i>
+                <i class="fa " [ngClass]="item.icon"></i> <span>{{item.name}}</span>
             </a>
             <c-treeview-menu [data]="item"></c-treeview-menu>
         </li>

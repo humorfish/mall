@@ -3,7 +3,7 @@ import {MenuData} from './main.model';
 import {Router} from '@angular/router';
 
 @Component({'selector': 'c-treeview-menu', templateUrl: 'treeview.menu.comp.html', styleUrls: ['treeview.menu.comp.scss']})
-export class TreaViewMenuComp
+export class TreeViewMenuComp
 {
     constructor(private router: Router)
     {
@@ -30,5 +30,16 @@ export class TreaViewMenuComp
             this.router.navigate([item.url]);
     }
 
-    @Input() data: MenuData;
+    @Input() set data(v: MenuData)
+    {
+        this._data = v;
+        console.log(this._data);
+    }
+
+    get data(): MenuData
+    {
+        return this._data;
+    }
+
+    _data: MenuData;
 }

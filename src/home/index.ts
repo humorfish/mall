@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../shared';
 
 import { HomeComp } from './home.comp';
-import { TreaViewMenuComp } from './treeview.menu.comp';
+import { TreeViewMenuComp } from './treeview.menu.comp';
 import { SidebarMenuComp } from './sidebar.menu.comp';
 
 const ROUTES: Routes = [
@@ -20,15 +20,15 @@ const ROUTES: Routes = [
     ],
     declarations: [
         HomeComp,
-        TreaViewMenuComp,
+        TreeViewMenuComp,
         SidebarMenuComp
     ],
     entryComponents: [
-        TreaViewMenuComp,
+        TreeViewMenuComp,
         SidebarMenuComp
     ],
     exports: [
-        TreaViewMenuComp,
+        TreeViewMenuComp,
         SidebarMenuComp
     ]
 })

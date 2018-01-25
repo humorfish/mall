@@ -219,7 +219,6 @@ export class HomeComp implements OnInit
         'url': '/app/demo/qrcodeDemo'
       }
       ]
-
     },
     {
       'id': '020',
@@ -333,7 +332,8 @@ export class HomeComp implements OnInit
           'url': '/app/menu/menuList'
         }]
       }]
-    }, {
+    },
+    {
       'id': '31',
       'parentId': '0',
       'name': '系统管理',
@@ -346,7 +346,7 @@ export class HomeComp implements OnInit
         'keyWord': 'txjk',
         'icon': 'fa-dashboard',
         'url': '/app/sysMonitor'
-      },{
+      }, {
         'id': '33',
         'parentId': '31',
         'name': '系统日志',
@@ -355,5 +355,5 @@ export class HomeComp implements OnInit
         'url': '/app/sysLog'
       }]
     }]
-  }
+  };
 }
