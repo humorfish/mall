@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, keyframes } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MenuData } from './main.model';
 
 @Component({
