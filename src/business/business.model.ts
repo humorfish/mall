@@ -5,19 +5,19 @@
  export class TodoData
  {
      id: number;
-     title: number;
+     title: string;
      submitUser: string;
-     createData: string;
+     createDate: string;
  }
 
  /**
   * todo object
   */
 
-  export class TodoObjectData
+  export class TodoObjData
   {
       total: number;
-      totoList: Array<TodoData>;
+      todoList: Array<TodoData>;
   }
 
 /**
@@ -36,7 +36,7 @@ export class NeedReadData
  *  todo read object
  */
 
-export class NeedReadObjectData
+export class NeedReadObjData
 {
     total: number;
     needReadList: Array<NeedReadData>;
@@ -57,7 +57,7 @@ export class NeedReadObjectData
   *  notice object
  */
 
-export class NoticeObjectData
+export class NoticeObjData
 {
     total: number;
     noticeList: Array<NoticeData>;
