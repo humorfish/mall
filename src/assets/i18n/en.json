@@ -1,6 +1,7 @@
 {
     "common": {
         "title": "后台管理系统登录",
+        "welcome": "欢迎您，{{username}}",
         "search_menu": "搜索菜单...",
         "search_not_exist": "搜索的菜单不存在..."
     },
@@ -17,5 +18,12 @@
     },
     "home_page": {
         "persional_info": "个人资料"
+    },
+    "business_page": {
+        "todo": "代办信息",
+        "you_have": "您共有",
+        "no_handle_message": "条未处理待办信息",
+        "see_more": "查看更多"
     }
+
 }

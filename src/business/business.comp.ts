@@ -11,6 +11,9 @@ export class BusinessComp implements OnInit
     {
     }
 
+    passwordEdit()
+    {
+    }
 
     userTipClose: boolean = false;
     isTodoCollapsed: boolean = false;

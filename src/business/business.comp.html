@@ -1,3 +1,61 @@
 <div class="c-content-inner-not-bg">
-
+    <div class="row c-mb15" [hidden]="userTipClose">
+        <div class="col-md-12">
+            <div class="card c-card">
+                <div class="card-body">
+                    <i class="fa fa-bullhorn fa-fw text-danger"></i>
+                    <strong class="text-danger">{{'common.welcome'|translate}}</strong>
+                    <span class="c-home-login-tip">
+                        ，这是您第 <span class="text-danger">12708</span>
+                        次登录，上次登录时间： <span class="text-danger">2017-5-20 21:05:20</span>
+                        ，如果不是您本人登录，请及时 <a href="javascript:void(0)" (click)="passwordEdit()">修改密码</a>。
+                    </span>
+                    <button aria-label="Close" class="close" type="button" (click)="userTipClose=true">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card c-card c-home-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <h5 class="card-title c-fs15"><i class="fa fa-bell-o fa-fw"></i>{{'business_page.todo'|translate}}</h5>
+                                </div>
+                                <div class="col-md-3 text-right">
+                                    <a class="c-cursor-pointer" (click)="isTodoCollapsed = !isTodoCollapsed">
+                                        <em class="fa fa-minus"></em>
+                                    </a>
+                                </div>
+                            </div>
+                            <div [ngbCollapse]="isTodoCollapsed">
+                                <div class="row c-mt15 c-scroll-y-a c-home-card-inner">
+                                    <div class="col-md-12">
+                                        <table class="c-line-table">
+                                            <tr>
+                                                <td>
+                                                    <span class="c-home-card-tip">
+                                                        <i class="fa fa-info fa-fw"></i>
+                                                        {{'business_page.you_have'|translate}}<strong class="text-danger"> {{todoObj.total}} </strong>{{'business_page.no_handle_message'|translate}}</span>
+                                                    </span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a class="text-danger c-cursor-pointer">{{'business_page.see_more'|translate}}</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
