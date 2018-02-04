@@ -49,6 +49,52 @@
                                                 </td>
                                             </tr>
                                         </table>
+                                        <table class="c-line-table table-hover">
+                                            <tbody>
+                                                <tr class="c-cursor-pointer" *ngFor="let todo of todoObj.todoList;let i = index">
+                                                    <td>{{i+i}}</td>
+                                                    <td>
+                                                        <span class="badge badge-success">{{todo.submitUser}}</span>&nbsp;
+                                                        <span>{{todo.title}}</span>
+                                                    </td>
+                                                    <td class="text-right c-date">
+                                                        {{todo.createDate}}
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row c-mt15">
+                <div class="col-md-12">
+                    <div class="card c-card c-home-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <h5 class="card-titile c-fs15">
+                                        <i class="fa fa-cubes fa-fw">{{'business_page.normal_func'|translate}</i>
+                                    </h5>
+                                </div>
+                                <div class="col-md-3 text-right">
+                                    <a class="c-cursor-pointer"><em class="fa fa-cog" placement="bottom" [ngbTooltip]="commonFuncConfigTip"></em></a>
+                                    <a class="c-cursor-pointer" (click)="isCommonFuncCollapsed = !isCommonFuncCollapsed"><em class="fa fa-minus"></em></a>
+                                </div>
+                            </div>
+                            <div [ngbCollapse]="isCommonFuncCollapsed">
+                                <div class="row c-mt15 c-scroll-y-a c-home-card-inner">
+                                    <div class="col-md-12">
+                                        <div class="row c-mt10" *ngFor="let commonFunc of commonFuncLit; let i = index">
+                                            <div class="card card-outline-secondary text-center c-home-common-func--outline">
+                                                <div class="card-body c-home-common-func">
+                                                    <i class="fa" [ngClass]="obj-icon"></i><span>{{obj.name}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

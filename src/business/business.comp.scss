@@ -15,5 +15,15 @@
             color: $c-color-black-secondary;
         }
     }
+}
 
+.c-home-common-func-outline {
+    border: 0px dashed $c-color-gray-deep;
+    .c-home-common-func {
+        padding: 6px;
+        &:hover {
+            background: $c-color-gray-deep;
+            cursor: pointer;
+        }
+    }
 }
