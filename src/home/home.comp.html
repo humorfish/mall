@@ -19,4 +19,15 @@
         </div>
         <c-sidebar-menu [data]="mainData.menuData"></c-sidebar-menu>
     </div>
+    <div class="c-right-wrapper" [ngClass]="{'c-right-wrapper-c': navClose, 'c-right-wrapper-o': !navClose}">
+        <div class="c-header">
+            <div class="c-title">
+                <button class="btn btn-light btn-xs" (click)="toggleNav();" placement="right" [ngbTooltip]="toggleDescTip">
+                    <i class="fa fa-dedent fa-fw" [hidden]="navClose"></i>
+                    <i class="fa fa-indent fa-fw" [hidden]="!navClose"></i>
+                </button>
+            <h3>{{title}}</h3>
+            </div>
+        </div>
+    </div>
 </div>

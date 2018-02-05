@@ -55,6 +55,11 @@ export class TApplication
         return this.ShowToast(Message, ToastType.ERROR);
     }
 
+    Translate(key: string): string
+    {
+        return this.Translation.instant(key);
+    }
+
     private Translation: TranslateService;
     private ToastService: ToastService;
 }
