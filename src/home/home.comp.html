@@ -1,5 +1,5 @@
 <div class="c-wrapper">
-    <div class="c-left-wrapper" >
+    <div class="c-left-wrapper" [ngClass]="{'c-left-wrapper-c': navClose, 'c-left-wrapper-o': !navClose}">
         <div class="c-header">
             <img src="assets/img/logo.png"/>
             <h3>{{'common.title'|translate}}</h3>
@@ -26,7 +26,7 @@
                     <i class="fa fa-dedent fa-fw" [hidden]="navClose"></i>
                     <i class="fa fa-indent fa-fw" [hidden]="!navClose"></i>
                 </button>
-            <h3>{{title}}</h3>
+                <h3>{{title}}</h3>
             </div>
         </div>
     </div>

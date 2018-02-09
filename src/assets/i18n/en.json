@@ -1,6 +1,6 @@
 {
     "common": {
-        "title": "后台管理系统登录",
+        "title": "后台管理系统",
         "welcome": "欢迎您，{{username}}",
         "search_menu": "搜索菜单...",
         "search_not_exist": "搜索的菜单不存在..."

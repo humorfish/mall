@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import { MainData } from './main.model';
 
-@Component({selector: 'c-home', templateUrl: 'home.comp.html'})
+@Component({selector: 'c-home', templateUrl: 'home.comp.html', styleUrls: ['home.comp.scss']})
 export class HomeComp implements OnInit
 {
     constructor(public router: Router)
